@@ -184,10 +184,10 @@ include 'php/title.php';
 					</div>
 					<div class="fh5co-item">
 						<a href="detail2.php?guoshu" class="transition animate-box">
-							<img src="picture/<?php echo $arr[8]['url'];?>" alt="湖北伊雪公司">
+							<img src="picture/<?php echo $arr[8]['title'];?>" alt="湖北伊雪公司">
 							<div class="fh5co-item-text-wrap">
 								<div class="fh5co-item-text">
-									<h2><?php echo $arr[8]['title'];?></h2>
+									<h2><?php echo $arr[8]['url'];?></h2>
 								</div>
 							</div>
 						</a>

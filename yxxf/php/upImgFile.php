@@ -1,4 +1,5 @@
 <?php
+
 // 拦截上传图片是否信息完整
 if( !$_POST['kindof'] || !$_POST['imgname'] || $_POST['imgType'] === '000'  ){
     echo "<script>alert('填写图片序号、格式等.')</script>";
@@ -9,7 +10,7 @@ if( !$_POST['kindof'] || !$_POST['imgname'] || $_POST['imgType'] === '000'  ){
 $kindof = $_POST['kindof'];
 $imgname = $_POST['imgname'];
 $imgType = $_POST['imgType'];
-
+define('ROOT', dirname(dirname(__FILE__)).'/');
 // 若图片上传error
 if ($_FILES["file"]["error"] > 0)
 {
@@ -32,8 +33,7 @@ else
     else
     {
         if(is_uploaded_file($_FILES['file']['tmp_name'])){
-            $stored_path = "../picture/$kindof/$imgname$imgType";
-
+            $stored_path = ROOT."picture/$kindof/$imgname$imgType";
             if(move_uploaded_file($_FILES['file']['tmp_name'],$stored_path)){
                 echo "Stored in: " . $stored_path;
                 include_once './imgDataToSql.php';
