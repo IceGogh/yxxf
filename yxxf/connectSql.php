@@ -9,7 +9,7 @@
     mysqli_query($con ,"set character_set_client=utf8");
     mysqli_query($con ,"set character_set_results=utf8");
     if($link){
-        echo "connect success成功 ! ".'<br/>';
+//        echo "connect success成功 ! ".'<br/>';
     }else{
         echo "连接失败!";
     }
